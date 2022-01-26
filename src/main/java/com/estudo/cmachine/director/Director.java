@@ -6,7 +6,6 @@ import com.estudo.cmachine.components.Configuracao;
 import com.estudo.cmachine.components.UnidadeDePreparacao;
 import com.estudo.cmachine.maquinas.TipoDeMaquina;
 
-import java.util.HashMap;
 
 public class Director {
     public void construirMaquinaDeCafeBasica(Builder builder){

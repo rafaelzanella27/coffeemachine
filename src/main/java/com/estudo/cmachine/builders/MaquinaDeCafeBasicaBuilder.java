@@ -4,8 +4,6 @@ import com.estudo.cmachine.components.*;
 import com.estudo.cmachine.maquinas.MaquinaDeCafeBasica;
 import com.estudo.cmachine.maquinas.TipoDeMaquina;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class MaquinaDeCafeBasicaBuilder implements Builder{
 

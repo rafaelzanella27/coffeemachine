@@ -2,8 +2,6 @@ package com.estudo.cmachine.maquinas;
 
 import com.estudo.cmachine.components.*;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class MaquinaDeCafeBasica {
 
