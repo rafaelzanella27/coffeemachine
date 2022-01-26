@@ -1,10 +1,18 @@
 package com.estudo.cmachine.builders;
 
+import com.estudo.cmachine.components.CafeEmGrao;
+import com.estudo.cmachine.components.Configuracao;
+import com.estudo.cmachine.components.TipoDeCafe;
+import com.estudo.cmachine.components.UnidadeDePreparacao;
+import com.estudo.cmachine.maquinas.TipoDeMaquina;
+
+import java.util.Map;
+
 public interface Builder {
 
-//    private void setTipoDeMaquina(TipoDeMaquina tipoDeMaquina);
-//    private void setConfiguracao(Configuracao configuracao);
-//    private void setTipoDeCafe(TipoDeCafe tipoDeCafe);
-//    private void setUnidadeDePreparacao(UnidadeDePreparacao unidadeDePreparacao);
-//    private void setFazCafeFiltrado;
+    void setTipoDeMaquina(TipoDeMaquina tipoDeMaquina);
+    void setConfiguracao(Map<TipoDeCafe, Configuracao> mapDeConfiguracao);
+    void setCafeEmGrao(CafeEmGrao cafeEmGrao);
+    void setUnidadeDePreparacao(UnidadeDePreparacao unidadeDePreparacao);
+
 }
