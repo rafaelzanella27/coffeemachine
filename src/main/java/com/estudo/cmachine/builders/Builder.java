@@ -11,8 +11,10 @@ import java.util.Map;
 public interface Builder {
 
     void setTipoDeMaquina(TipoDeMaquina tipoDeMaquina);
-    void setConfiguracao(Map<TipoDeCafe, Configuracao> mapDeConfiguracao);
+    void setConfiguracao(Configuracao configuracao);
     void setCafeEmGrao(CafeEmGrao cafeEmGrao);
     void setUnidadeDePreparacao(UnidadeDePreparacao unidadeDePreparacao);
+
+
 
 }

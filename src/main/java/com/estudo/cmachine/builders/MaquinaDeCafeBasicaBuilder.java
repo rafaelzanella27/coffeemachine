@@ -1,9 +1,6 @@
 package com.estudo.cmachine.builders;
 
-import com.estudo.cmachine.components.CafeEmGrao;
-import com.estudo.cmachine.components.Configuracao;
-import com.estudo.cmachine.components.TipoDeCafe;
-import com.estudo.cmachine.components.UnidadeDePreparacao;
+import com.estudo.cmachine.components.*;
 import com.estudo.cmachine.maquinas.MaquinaDeCafeBasica;
 import com.estudo.cmachine.maquinas.TipoDeMaquina;
 
@@ -13,7 +10,7 @@ import java.util.Map;
 public class MaquinaDeCafeBasicaBuilder implements Builder{
 
     private TipoDeMaquina tipoDeMaquina;
-    private Map<TipoDeCafe, Configuracao> mapDeConfiguracao;
+    private Configuracao configuracao;
     private CafeEmGrao cafeEmGrao;
     private UnidadeDePreparacao unidadeDePreparacao;
 
@@ -23,9 +20,8 @@ public class MaquinaDeCafeBasicaBuilder implements Builder{
     }
 
     @Override
-    public void setConfiguracao(Map<TipoDeCafe, Configuracao> mapDeConfiguracao) {
-        this.mapDeConfiguracao = new HashMap<>();
-        mapDeConfiguracao.put(TipoDeCafe.FILTRADO, new Configuracao(30,480));
+    public void setConfiguracao(Configuracao configuracao) {
+        this.configuracao = new Configuracao(30,480);
     }
 
     @Override
@@ -39,6 +35,12 @@ public class MaquinaDeCafeBasicaBuilder implements Builder{
     }
 
     public MaquinaDeCafeBasica getResult(){
-        return new MaquinaDeCafeBasica(tipoDeMaquina, mapDeConfiguracao, cafeEmGrao, unidadeDePreparacao);
+        return new MaquinaDeCafeBasica(tipoDeMaquina, configuracao, cafeEmGrao, unidadeDePreparacao);
     }
+
+    public BebidaDeCafe fazCafeFiltrado(){
+        BebidaDeCafe bebidaDeCafe;
+        return  bebidaDeCafe = new MaquinaDeCafeBasica(tipoDeMaquina, configuracao, cafeEmGrao, unidadeDePreparacao).prepararCafeFiltrado(configuracao, cafeEmGrao);
+    }
+
 }

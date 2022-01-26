@@ -8,25 +8,18 @@ import java.util.Map;
 public class MaquinaDeCafeBasica {
 
     private TipoDeMaquina tipoDeMaquina;
-    private Map<TipoDeCafe, Configuracao> mapDeConfiguracao;
+    private Configuracao configuracao;
     private CafeEmGrao cafeEmGrao;
     private UnidadeDePreparacao unidadeDePreparacao;
 
-    public MaquinaDeCafeBasica(TipoDeMaquina tipoDeMaquina, Map<TipoDeCafe, Configuracao> mapDeConfiguracao, CafeEmGrao cafeEmGrao, UnidadeDePreparacao unidadeDePreparacao) {
+    public MaquinaDeCafeBasica(TipoDeMaquina tipoDeMaquina, Configuracao configuracao, CafeEmGrao cafeEmGrao, UnidadeDePreparacao unidadeDePreparacao) {
         this.tipoDeMaquina = tipoDeMaquina;
-        this.mapDeConfiguracao = mapDeConfiguracao;
+        this.configuracao = configuracao;
         this.cafeEmGrao = cafeEmGrao;
         this.unidadeDePreparacao = unidadeDePreparacao;
     }
 
-    public MaquinaDeCafeBasica(CafeEmGrao cafeEmGrao){
-        this.mapDeConfiguracao = new HashMap<>();
-        mapDeConfiguracao.put(TipoDeCafe.FILTRADO, new Configuracao(30,480));
-
-    }
-
-    public BebidaDeCafe prepararCafeFiltrado(){
-        Configuracao configuracao = mapDeConfiguracao.get(TipoDeCafe.FILTRADO);
+    public BebidaDeCafe prepararCafeFiltrado(Configuracao configuracao, CafeEmGrao cafeEmGrao){
         return this.unidadeDePreparacao.preparar(TipoDeCafe.FILTRADO, cafeEmGrao, configuracao.getQuantidadeAgua());
     }
 
@@ -38,12 +31,12 @@ public class MaquinaDeCafeBasica {
         this.tipoDeMaquina = tipoDeMaquina;
     }
 
-    public Map<TipoDeCafe, Configuracao> getMapDeConfiguracao() {
-        return mapDeConfiguracao;
+    public Configuracao getConfiguracao() {
+        return configuracao;
     }
 
-    public void setMapDeConfiguracao(Map<TipoDeCafe, Configuracao> mapDeConfiguracao) {
-        this.mapDeConfiguracao = mapDeConfiguracao;
+    public void Configuracao(Configuracao configuracao) {
+        this.configuracao = configuracao;
     }
 
     public CafeEmGrao getCafeEmGrao() {

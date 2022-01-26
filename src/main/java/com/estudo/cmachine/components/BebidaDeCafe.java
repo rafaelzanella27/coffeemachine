@@ -26,4 +26,12 @@ public class BebidaDeCafe {
         }
 
     }
+
+    @Override
+    public String toString() {
+        return "BebidaDeCafe{" +
+                "tipoDeCafe=" + tipoDeCafe +
+                ", quantidade=" + quantidade +
+                '}';
+    }
 }
