@@ -1,10 +1,15 @@
 package com.estudo.cmachine.builders;
 
+import com.estudo.cmachine.components.*;
+import com.estudo.cmachine.maquinas.TipoDeMaquina;
+
 public interface Builder {
 
-//    private void setTipoDeMaquina(TipoDeMaquina tipoDeMaquina);
-//    private void setConfiguracao(Configuracao configuracao);
-//    private void setTipoDeCafe(TipoDeCafe tipoDeCafe);
-//    private void setUnidadeDePreparacao(UnidadeDePreparacao unidadeDePreparacao);
-//    private void setFazCafeFiltrado;
+    void setTipoDeMaquina(TipoDeMaquina tipoDeMaquina);
+    void setConfiguracao(Configuracao configuracao);
+    void setCafeMoido(CafeMoido cafeMoido);
+    void setUnidadeDePreparacao(UnidadeDePreparacao unidadeDePreparacao);
+
+
+
 }
