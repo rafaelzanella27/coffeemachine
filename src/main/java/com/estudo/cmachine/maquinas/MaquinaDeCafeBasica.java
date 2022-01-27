@@ -18,7 +18,7 @@ public class MaquinaDeCafeBasica {
     }
 
     public BebidaDeCafe prepararCafeFiltrado(Configuracao configuracao, CafeEmGrao cafeEmGrao){
-        return this.unidadeDePreparacao.preparar(TipoDeCafe.FILTRADO, cafeEmGrao, configuracao.getQuantidadeAgua());
+        return this.unidadeDePreparacao.prepararBebidaComCafeEmGrao(TipoDeCafe.FILTRADO, cafeEmGrao, configuracao.getQuantidadeAgua());
     }
 
     public TipoDeMaquina getTipoDeMaquina() {
