@@ -3,7 +3,6 @@ package com.estudo.cmachine.builders;
 import com.estudo.cmachine.components.*;
 import com.estudo.cmachine.maquinas.TipoDeMaquina;
 
-
 public interface Builder {
 
     void setTipoDeMaquina(TipoDeMaquina tipoDeMaquina);

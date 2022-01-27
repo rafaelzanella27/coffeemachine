@@ -17,4 +17,5 @@ public class Configuracao {
     public double getQuantidadeAgua() {
         return quantidadeAgua;
     }
+
 }
