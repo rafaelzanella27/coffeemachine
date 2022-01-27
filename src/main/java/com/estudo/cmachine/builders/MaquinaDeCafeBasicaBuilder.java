@@ -9,7 +9,8 @@ public class MaquinaDeCafeBasicaBuilder implements Builder{
 
     private TipoDeMaquina tipoDeMaquina;
     private Configuracao configuracao;
-    private CafeMoido cafeMoido;
+    private TipoDeCafe tipoDeCafe;
+    //private CafeMoido cafeMoido;
     private UnidadeDePreparacao unidadeDePreparacao;
 
     @Override
@@ -23,9 +24,14 @@ public class MaquinaDeCafeBasicaBuilder implements Builder{
     }
 
     @Override
-    public void setCafeMoido(CafeMoido cafeMoido) {
-        this.cafeMoido = cafeMoido;
+    public void setTipoDeCafe(TipoDeCafe tipoDeCafe) {
+        this.tipoDeCafe = TipoDeCafe.FILTRADO;
     }
+
+    //    @Override
+//    public void setCafeMoido(CafeMoido cafeMoido) {
+//        this.cafeMoido = cafeMoido;
+//    }
 
     @Override
     public void setUnidadeDePreparacao(UnidadeDePreparacao unidadeDePreparacao) {
@@ -33,12 +39,12 @@ public class MaquinaDeCafeBasicaBuilder implements Builder{
     }
 
     public MaquinaDeCafeBasica getResult(){
-        return new MaquinaDeCafeBasica(tipoDeMaquina, configuracao, cafeMoido, unidadeDePreparacao);
+        return new MaquinaDeCafeBasica(tipoDeMaquina, configuracao, unidadeDePreparacao);
     }
 
     public BebidaDeCafe fazCafeFiltrado(){
         BebidaDeCafe bebidaDeCafe;
-        return  bebidaDeCafe = new MaquinaDeCafeBasica(tipoDeMaquina, configuracao, cafeMoido, unidadeDePreparacao).prepararCafeFiltrado(configuracao, cafeMoido);
+        return  bebidaDeCafe = new MaquinaDeCafeBasica(tipoDeMaquina, configuracao, unidadeDePreparacao).prepararCafeFiltrado(configuracao, tipoDeCafe);
     }
 
 

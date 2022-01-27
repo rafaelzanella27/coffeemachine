@@ -7,7 +7,8 @@ public interface Builder {
 
     void setTipoDeMaquina(TipoDeMaquina tipoDeMaquina);
     void setConfiguracao(Configuracao configuracao);
-    void setCafeMoido(CafeMoido cafeMoido);
+    void setTipoDeCafe(TipoDeCafe tipoDeCafe);
+    //void setCafeMoido(CafeMoido cafeMoido);
     void setUnidadeDePreparacao(UnidadeDePreparacao unidadeDePreparacao);
 
 

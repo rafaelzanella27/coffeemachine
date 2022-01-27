@@ -7,18 +7,19 @@ public class MaquinaDeCafeBasica {
 
     private TipoDeMaquina tipoDeMaquina;
     private Configuracao configuracao;
-    private CafeMoido cafeMoido;
+    //private CafeMoido cafeMoido;
     private UnidadeDePreparacao unidadeDePreparacao;
 
-    public MaquinaDeCafeBasica(TipoDeMaquina tipoDeMaquina, Configuracao configuracao, CafeMoido cafeMoido, UnidadeDePreparacao unidadeDePreparacao) {
+    public MaquinaDeCafeBasica(TipoDeMaquina tipoDeMaquina, Configuracao configuracao, UnidadeDePreparacao unidadeDePreparacao) {
         this.tipoDeMaquina = tipoDeMaquina;
         this.configuracao = configuracao;
-        this.cafeMoido = cafeMoido;
+        //this.cafeMoido = cafeMoido;
         this.unidadeDePreparacao = unidadeDePreparacao;
     }
 
-    public BebidaDeCafe prepararCafeFiltrado(Configuracao configuracao, CafeMoido cafeMoido){
-        return this.unidadeDePreparacao.prepararBebidaComCafeEmGrao(TipoDeCafe.FILTRADO, cafeMoido, configuracao.getQuantidadeAgua());
+    public BebidaDeCafe prepararCafeFiltrado(Configuracao configuracao, TipoDeCafe tipoDeCafe){
+        CafeMoido cafeMoido = new CafeMoido("Mellita", 1);
+        return this.unidadeDePreparacao.prepararBebidaComCafeEmGrao(tipoDeCafe, cafeMoido, configuracao.getQuantidadeAgua());
     }
 
     public TipoDeMaquina getTipoDeMaquina() {
@@ -37,13 +38,13 @@ public class MaquinaDeCafeBasica {
         this.configuracao = configuracao;
     }
 
-    public CafeMoido getCafeMoido() {
-        return cafeMoido;
-    }
-
-    public void setCafeMoido(CafeMoido cafeMoido) {
-        this.cafeMoido = cafeMoido;
-    }
+//    public CafeMoido getCafeMoido() {
+//        return cafeMoido;
+//    }
+//
+//    public void setCafeMoido(CafeMoido cafeMoido) {
+//        this.cafeMoido = cafeMoido;
+//    }
 
     public UnidadeDePreparacao getUnidadeDePreparacao() {
         return unidadeDePreparacao;

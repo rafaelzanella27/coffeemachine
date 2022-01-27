@@ -2,6 +2,7 @@ package com.estudo.cmachine;
 
 import com.estudo.cmachine.builders.MaquinaDeCafeBasicaBuilder;
 import com.estudo.cmachine.components.BebidaDeCafe;
+import com.estudo.cmachine.components.TipoDeCafe;
 import com.estudo.cmachine.director.Director;
 import com.estudo.cmachine.maquinas.MaquinaDeCafeBasica;
 
@@ -10,7 +11,7 @@ public class Demo {
         Director director = new Director();
         MaquinaDeCafeBasicaBuilder maquinaDeCafeBasicaBuilder = new MaquinaDeCafeBasicaBuilder();
 
-        director.construirMaquinaDeCafeBasica(maquinaDeCafeBasicaBuilder);
+        director.construirMaquinaDeCafeBasica(maquinaDeCafeBasicaBuilder, TipoDeCafe.FILTRADO);
 
         MaquinaDeCafeBasica maquinaDeCafeBasica = maquinaDeCafeBasicaBuilder.getResult();
         System.out.println("Maquina utilizada: " + maquinaDeCafeBasica.getTipoDeMaquina());
