@@ -3,7 +3,7 @@ package com.estudo.cmachine.components;
 public class UnidadeDePreparacao {
 
 
-    public BebidaDeCafe prepararBebidaComCafeEmGrao(TipoDeCafe tipoDeCafe, CafeEmGrao cafeEmGrao, double quantidade){
+    public BebidaDeCafe prepararBebidaComCafeEmGrao(TipoDeCafe tipoDeCafe, CafeMoido cafeMoido, double quantidade){
         return new BebidaDeCafe(tipoDeCafe, quantidade);
     }
 
