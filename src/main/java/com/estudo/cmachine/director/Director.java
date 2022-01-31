@@ -13,10 +13,10 @@ public class Director {
         builder.setUnidadeDePreparacao(new UnidadeDePreparacao());
     }
 
-//    public void construirMaquinaDeCafePremium(Builder builder){
-//        builder.setTipoDeMaquina(TipoDeMaquina.PREMIUM);
-//        builder.setConfiguracao(new Configuracao(30,480));
-//        builder.setCafeEmGrao(new CafeEmGrao("curto", 1));
-//        builder.setUnidadeDePreparacao(new UnidadeDePreparacao());
-//    }
+    public void construirMaquinaDeCafePremium(Builder builder, TipoDeCafe tipoDeCafe){
+        builder.setTipoDeMaquina(TipoDeMaquina.PREMIUM);
+        builder.setConfiguracao(new Configuracao(30,480));
+        builder.setTipoDeCafe(tipoDeCafe);
+        builder.setUnidadeDePreparacao(new UnidadeDePreparacao());
+    }
 }

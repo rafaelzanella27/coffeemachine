@@ -1,11 +1,15 @@
 package com.estudo.cmachine.builders;
 
-import com.estudo.cmachine.components.*;
+import com.estudo.cmachine.components.BebidaDeCafe;
+import com.estudo.cmachine.components.Configuracao;
+import com.estudo.cmachine.components.TipoDeCafe;
+import com.estudo.cmachine.components.UnidadeDePreparacao;
 import com.estudo.cmachine.maquinas.MaquinaDeCafeBasica;
+import com.estudo.cmachine.maquinas.MaquinaDeCafePremium;
 import com.estudo.cmachine.maquinas.TipoDeMaquina;
 
 
-public class MaquinaDeCafeBasicaBuilder implements Builder{
+public class MaquinaDeCafePremiumBuilder implements Builder{
 
     private TipoDeMaquina tipoDeMaquina;
     private Configuracao configuracao;
@@ -33,8 +37,8 @@ public class MaquinaDeCafeBasicaBuilder implements Builder{
         this.unidadeDePreparacao = unidadeDePreparacao;
     }
 
-    public MaquinaDeCafeBasica getResult(){
-        return new MaquinaDeCafeBasica(tipoDeMaquina, configuracao, unidadeDePreparacao);
+    public MaquinaDeCafePremium getResult(){
+        return new MaquinaDeCafePremium(tipoDeMaquina, configuracao, unidadeDePreparacao);
     }
 
     public BebidaDeCafe fazCafeFiltrado(){
@@ -42,5 +46,14 @@ public class MaquinaDeCafeBasicaBuilder implements Builder{
         return  bebidaDeCafe = new MaquinaDeCafeBasica(tipoDeMaquina, configuracao, unidadeDePreparacao).prepararCafeFiltrado(configuracao, tipoDeCafe);
     }
 
+    public BebidaDeCafe fazCafeExpresso(){
+        BebidaDeCafe bebidaDeCafe;
+        return  bebidaDeCafe = new MaquinaDeCafePremium(tipoDeMaquina, configuracao, unidadeDePreparacao).prepararCafeExpresso(configuracao, tipoDeCafe);
+    }
+
+    public BebidaDeCafe fazCafeCappuccino(){
+        BebidaDeCafe bebidaDeCafe;
+        return  bebidaDeCafe = new MaquinaDeCafePremium(tipoDeMaquina, configuracao, unidadeDePreparacao).prepararCafeCappuccino(configuracao, tipoDeCafe);
+    }
 
 }
