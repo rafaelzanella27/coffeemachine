@@ -10,7 +10,6 @@ public class Director {
         builder.setTipoDeMaquina(TipoDeMaquina.BASICA);
         builder.setConfiguracao(new Configuracao(30,480));
         builder.setTipoDeCafe(tipoDeCafe);
-        //builder.setCafeMoido(new CafeMoido("Melita", 1));
         builder.setUnidadeDePreparacao(new UnidadeDePreparacao());
     }
 

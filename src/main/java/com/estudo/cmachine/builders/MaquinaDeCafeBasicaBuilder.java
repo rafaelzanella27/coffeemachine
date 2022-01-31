@@ -10,7 +10,6 @@ public class MaquinaDeCafeBasicaBuilder implements Builder{
     private TipoDeMaquina tipoDeMaquina;
     private Configuracao configuracao;
     private TipoDeCafe tipoDeCafe;
-    //private CafeMoido cafeMoido;
     private UnidadeDePreparacao unidadeDePreparacao;
 
     @Override
@@ -28,10 +27,6 @@ public class MaquinaDeCafeBasicaBuilder implements Builder{
         this.tipoDeCafe = TipoDeCafe.FILTRADO;
     }
 
-    //    @Override
-//    public void setCafeMoido(CafeMoido cafeMoido) {
-//        this.cafeMoido = cafeMoido;
-//    }
 
     @Override
     public void setUnidadeDePreparacao(UnidadeDePreparacao unidadeDePreparacao) {
